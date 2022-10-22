@@ -1,0 +1,25 @@
+.hero{
+    margin:0;
+    height: 80vh;
+    background-color: rgb(233, 233, 233);
+    width:100%
+}
+.heading{
+    height: 80vh;
+    
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 2rem;
+
+}
+p{
+    padding: 2rem;
+    font-size: 1rem;
+}
+.happy{
+    font-size: 4rem;
+    text-shadow: 5px solid black;
+    
+}

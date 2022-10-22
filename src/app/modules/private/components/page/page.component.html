@@ -1,0 +1,60 @@
+<p>page works!</p>
+
+
+
+<nav>
+    <button (click)="enableForm()" (click)="enableSave()" >Add page</button>
+</nav>
+
+<table>
+    <thead>
+        <tr>
+            <th>Title Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let page of pageDto">
+        <td><a [routerLink]="['/category/viewpage',page.pageId]"> {{page.title}} </a></td>
+        <td> <Button (click)="setPage(page)">Edit</Button></td>
+        <td><Button (click)="deletePage(page.pageId)" >Delete</Button></td>
+    </tr>
+
+
+</table>
+
+<div class="header">
+
+</div>
+<div class="r1">
+
+    <div class="formBlock" *ngIf="showForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitSave(form.value)">
+
+            <div>
+
+                <label for="title">title</label>
+                <input type="text" id="title" name="title" [(ngModel)]="title">
+            </div>
+            <div>
+
+                <label for="content">content</label>
+                <!-- <input type="text" id="content" name="content" [(ngModel)]="content"> -->
+                <quill-editor type="text" id="content" name="content" [(ngModel)]="content"  [modules]="modules"></quill-editor>
+            </div>
+            <div>
+
+                <button type="submit" >
+                    Save
+                </button>
+            </div>
+    
+
+        </form>
+
+
+    </div>
+
+    
+</div>

@@ -1,0 +1,29 @@
+<p>add-category works!</p>
+<div class="header">
+    <Button (click)="onEditForm()">Edit</Button>
+</div>
+<div class="r1">
+
+    <div class="formBlock" *ngIf="showForm">
+        <form #category="ngForm" (ngSubmit)="onSubmitSave(category)">
+
+            <div>
+
+                <label for="categoryName">category Name</label>
+                <input type="text" id="categoryName" name="categoryName" [(ngModel)]="categoryName">
+            </div>
+            <div>
+
+                <button type="submit" (click)="onEditForm()">
+                    Save
+                </button>
+            </div>
+    
+
+        </form>
+
+
+    </div>
+
+    {{categoryName}}
+</div>

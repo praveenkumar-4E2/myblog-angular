@@ -1,0 +1,27 @@
+<div class="content">
+    <div class="category" *ngFor="let cat of subjectcategorylist">
+
+        <div class="title">
+            <h1>{{cat.categoryName}}</h1>
+        </div>
+        
+
+        <div class="subjects">
+
+            <div class="card" *ngFor="let sub of cat.subject" [routerLink]="['/home/blog',sub.subjectId]">
+
+           
+
+                <div class="subjectImage">
+                    <img [src]="sub.subjectImage" alt="img" srcset="">
+                </div>
+                <div class="subTitle">
+                    <h1>{{sub.subjectName}}</h1>
+                </div>
+           
+        </div>
+        </div>
+        
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.footer{
+    width:30vh;
+background-color: black;
+color:white;
+
+}
+.name{
+    color:white;
+    padding:3rem;
+    margin:3rem;
+    text-align: center;
+}

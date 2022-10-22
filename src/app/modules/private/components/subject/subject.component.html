@@ -1,0 +1,72 @@
+<nav>
+    <button (click)="enableForm()" (click)="enableSave()" >Add Subject</button>
+</nav>
+
+
+<div class="subjectList" *ngFor="let subject of subjectdto">
+    <div class="card" >
+
+        <div class="subjectRight" [routerLink]="['/category/topic',subject.subjectId,subject.subjectName]">
+            <div class="subjectName">
+
+                <a >
+                    <h1>{{subject.subjectName}}</h1>
+                </a>
+            </div>
+
+            <div class="subjectImage">
+                <img [src]="subject.subjectImage" alt="img" srcset="">
+            </div>
+            <div class="description">
+                <p>{{subject.description}}</p>
+            </div>
+            <div class="preRequests">
+                <p>{{subject.preRequests}}</p>
+            </div>
+            <div class="audience">
+                <p>{{subject.audience}}</p>
+            </div>
+        </div>
+        <div class="subjectLeft">
+            <button (click)="setSubjectDto(subject)">Edit</button>
+            <button (click)="deleteSubject(subject.subjectId)">Delete</button>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="formdiv">
+    <div class="formBlock" *ngIf="showForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitSave(form.value)">
+            <div>
+                <label for="subjectName">subjectName Name</label>
+                <input type="text" id="subjectName" name="subjectName" [(ngModel)]="subjectName">
+            </div>
+            <div>
+                <label for="subjectImage">subjectImage</label>
+                <input type="text" id="subjectImage" name="subjectImage" [(ngModel)]="subjectImage">
+            </div>
+            <div>
+                <label for="description">description</label>
+                <input type="text" id="description" name="description" [(ngModel)]="description">
+            </div>
+            <div>
+                <label for="preRequests">preRequests</label>
+                <input type="text" id="preRequests" name="preRequests" [(ngModel)]="preRequests">
+            </div>
+            <div>
+                <label for="audience">audience</label>
+                <input type="text" id="audience" name="audience" [(ngModel)]="audience">
+            </div>
+            <div>
+                <button type="submit" >
+                    Save
+                </button>
+                <button  (click)="disableForm()" >
+                    cancle
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

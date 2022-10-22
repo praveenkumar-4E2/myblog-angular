@@ -1,0 +1,9 @@
+
+<div class="items" *ngFor="let topic of subjectData.topic">
+
+    <h1>{{topic.topicName}}</h1>
+    <div class="pages" *ngFor="let page of topic.pages">
+        <a  (click)="onPageSelected(page)"> <h2>{{page.title}}</h2></a>
+    </div>
+    
+</div>

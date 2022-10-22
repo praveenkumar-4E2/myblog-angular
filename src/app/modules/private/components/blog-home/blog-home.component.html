@@ -1,0 +1,51 @@
+<nav>
+    <button (click)="enableForm()" (click)="enableSave()" >Add Category</button>
+</nav>
+
+<table>
+    <thead>
+        <tr>
+            <th>Category Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let cat of categoryDto">
+        <td><a [routerLink]="['/category/subject',cat.categoryId,cat.categoryName]"> {{cat.categoryName}} </a></td>
+        <td> <Button (click)="enableForm()" (click)="setCategoryDto(cat)">Edit</Button></td>
+        <td><Button (click)="deleteCategory(cat.categoryId)" >Delete</Button></td>
+    </tr>
+
+
+</table>
+
+<div class="header">
+
+</div>
+<div class="r1">
+
+    <div class="formBlock" *ngIf="showForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitSave(form.value)">
+
+            <div>
+
+                <label for="categoryName">category Name</label>
+                <input type="text" id="categoryName" name="categoryName" [(ngModel)]="categoryName">
+            </div>
+            <div>
+
+                <button type="submit" >
+                    Save
+                </button>
+            </div>
+    
+
+        </form>
+
+
+    </div>
+
+    {{categoryName}}
+
+</div>

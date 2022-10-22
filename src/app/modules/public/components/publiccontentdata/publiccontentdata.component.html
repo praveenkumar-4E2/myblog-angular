@@ -1,0 +1,15 @@
+
+<div class="navbar">
+    <button (click)="toggleNav()">show topics</button>
+</div>
+<div class="container">
+    <div class="left" *ngIf="showNav">
+        <app-publiccontentleft (pageData)="pageSelectedData($event)"  [subjectData]="subject"></app-publiccontentleft>
+    </div>
+    <div class="right" *ngIf="!showNav">
+        <app-publiccontentroght [page]="pageData"></app-publiccontentroght>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,22 @@
+.navbar{
+background-color:aquamarine;
+height:3rem;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+button{
+    background-color:white;
+    border: none;
+    width:8rem;
+    height:2rem;
+    border-radius: 1rem;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+}
+.left{
+    width:100%;
+}

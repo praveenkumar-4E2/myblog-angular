@@ -1,0 +1,24 @@
+.navbar{
+    width: 100%;
+    height:4rem;
+    background-color:rgb(75, 185, 75);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.left{
+    padding-left:4rem;
+}
+.right{
+    width:50%;
+}
+a{
+    text-decoration:none;
+    color:aliceblue;
+    cursor:pointer;
+}
+a:hover{
+    background-color:black;
+    border:1rem solid black;
+    border-radius: 1rem;
+}

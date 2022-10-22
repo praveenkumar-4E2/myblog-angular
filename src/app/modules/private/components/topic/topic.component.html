@@ -1,0 +1,51 @@
+
+<nav>
+    <button (click)="enableForm()" (click)="enableSave()" >Add Topic</button>
+</nav>
+
+<table>
+    <thead>
+        <tr>
+            <th>Topic Name</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tr *ngFor="let topic of topicDto">
+        <td><a [routerLink]="['/category/page',topic.topicId,topic.topicName]"> {{topic.topicName}} </a></td>
+        <td> <Button (click)="setTopicDto(topic)">Edit</Button></td>
+        <td><Button (click)="deleteTopic(topic.topicId)" >Delete</Button></td>
+    </tr>
+
+
+</table>
+
+<div class="header">
+
+</div>
+<div class="r1">
+
+    <div class="formBlock" *ngIf="showForm">
+        <form #form="ngForm" (ngSubmit)="onSubmitSave(form.value)">
+
+            <div>
+
+                <label for="topicName">category Name</label>
+                <input type="text" id="topicName" name="topicName" [(ngModel)]="topicName">
+            </div>
+            <div>
+
+                <button type="submit" >
+                    Save
+                </button>
+            </div>
+    
+
+        </form>
+
+
+    </div>
+
+    
+</div>
