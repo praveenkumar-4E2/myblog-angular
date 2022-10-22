@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 })
 export class PublicService {
 
-  private category_URL = "http://localhost:8080/category/";
-  private subject_URL = "http://localhost:8080/subject/";
+  private category_URL = "https://myblog-praveen.herokuapp.com/category/";
+  private subject_URL = "https://myblog-praveen.herokuapp.com/subject/";
   constructor(private httpClient:HttpClient) { }
   getCategorySubject()
   {

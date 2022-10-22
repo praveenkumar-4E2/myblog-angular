@@ -17,10 +17,10 @@ export class BlogService {
   getPage(pageId: any) {
     throw new Error('Method not implemented.');
   }
-  private category_URL = "http://localhost:8080/category/";
-  private subject_URL = "http://localhost:8080/subject/";
-  private topic_URL = "http://localhost:8080/topic/";
-  private page_URL = "http://localhost:8080/page/";
+  private category_URL = "https://myblog-praveen.herokuapp.com/category/";
+  private subject_URL = "https://myblog-praveen.herokuapp.com/subject/";
+  private topic_URL = "https://myblog-praveen.herokuapp.com/topic/";
+  private page_URL = "https://myblog-praveen.herokuapp.com/page/";
 
 
   constructor(private httpClient: HttpClient) { }

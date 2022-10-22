@@ -9,7 +9,7 @@ import { CategoryDto } from '../models/category-dto';
 })
 export class CategoryService {
 
-  private category_URL = "http://localhost:8080/category/";
+  private category_URL = "https://myblog-praveen.herokuapp.com/category/";
   constructor(private httpClient: HttpClient) { }
 
   

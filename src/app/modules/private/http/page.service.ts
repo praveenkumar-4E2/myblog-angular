@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class PageService {
 
-  private page_URL = "http://localhost:8080/page/";
+  private page_URL = "https://myblog-praveen.herokuapp.com/page/";
   constructor(private httpClient:HttpClient) { }
   public deletePage(pageId: any) {
     return this.httpClient.delete<any>(this.page_URL+pageId,{ responseType: 'text' as 'json'});

@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class SubjectserviceService {
 
-  private subject_URL = "http://localhost:8080/subject/";
+  private subject_URL = "https://myblog-praveen.herokuapp.com/subject/";
 
   constructor(private httpClient:HttpClient) { }
 
