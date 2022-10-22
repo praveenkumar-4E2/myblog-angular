@@ -1,5 +1,5 @@
 .footer{
-    width:30vh;
+    width:100%;
 background-color: black;
 color:white;
 
@@ -7,6 +7,6 @@ color:white;
 .name{
     color:white;
     padding:3rem;
-    margin:3rem;
+    
     text-align: center;
 }
