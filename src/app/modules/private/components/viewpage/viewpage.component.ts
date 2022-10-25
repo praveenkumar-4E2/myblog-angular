@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { BlogService } from '../../http/blog.service';
 import { Page } from '../../models/page';
@@ -7,7 +7,8 @@ import { PageDto } from '../../models/page-dto';
 @Component({
   selector: 'app-viewpage',
   templateUrl: './viewpage.component.html',
-  styleUrls: ['./viewpage.component.css']
+  styleUrls: ['./viewpage.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 export class ViewpageComponent implements OnInit {
 

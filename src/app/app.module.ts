@@ -7,9 +7,11 @@ import { PrivateModule } from './modules/private/private.module';
 import { HttpClientModule } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill'
 import { PublicModule } from './modules/public/public.module';
+import { SafePipe } from './safe.pipe';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,9 @@ import { PublicModule } from './modules/public/public.module';
     QuillModule.forRoot(),
     QuillModule,
 
+  ],
+  exports: [
+  SafePipe
   ],
   providers: [HttpClientModule],
   bootstrap: [AppComponent]

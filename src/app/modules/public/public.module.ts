@@ -13,6 +13,7 @@ import { PubliccontentleftComponent } from './components/publiccontentleft/publi
 import { PubliccontentroghtComponent } from './components/publiccontentroght/publiccontentroght.component';
 import { PubliccontentdataComponent } from './components/publiccontentdata/publiccontentdata.component';
 import { FormsModule, NgForm } from '@angular/forms';
+import { SafePipe } from 'src/app/safe.pipe';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { FormsModule, NgForm } from '@angular/forms';
     CommonModule,
     PublicRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SafePipe
   
   ]
 })

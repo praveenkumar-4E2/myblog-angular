@@ -15,7 +15,8 @@ import { AddSubjectComponent } from './components/add-subject/add-subject.compon
 import { AddtopicComponent } from './components/addtopic/addtopic.component';
 import { AddpageComponent } from './components/addpage/addpage.component';
 import { FormsModule } from '@angular/forms';
-import { QuillModule } from 'ngx-quill'
+import { QuillModule } from 'ngx-quill';
+import { SafePipe } from './pipes/safe.pipe'
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { QuillModule } from 'ngx-quill'
          AddCategoryComponent,
          AddSubjectComponent,
          AddtopicComponent,
-         AddpageComponent
+         AddpageComponent,
+         SafePipe
   ],
   imports: [
     CommonModule,
