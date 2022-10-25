@@ -8,10 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { QuillModule } from 'ngx-quill'
 import { PublicModule } from './modules/public/public.module';
 import { SafePipe } from './safe.pipe';
+
+import { SharedModule } from './modules/shared/shared.module';
 @NgModule({
   declarations: [
     AppComponent,
-    SafePipe
+    SafePipe,
+  
   ],
   imports: [
     BrowserModule,
@@ -21,11 +24,10 @@ import { SafePipe } from './safe.pipe';
     HttpClientModule,
     QuillModule.forRoot(),
     QuillModule,
+    SharedModule
 
   ],
-  exports: [
-  SafePipe
-  ],
+ 
   providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })

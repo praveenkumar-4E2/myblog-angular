@@ -14,6 +14,10 @@ import { PubliccontentroghtComponent } from './components/publiccontentroght/pub
 import { PubliccontentdataComponent } from './components/publiccontentdata/publiccontentdata.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { SafePipe } from 'src/app/safe.pipe';
+import { SharedModule } from '../shared/shared.module';
+import { HtmlsafePipe } from '../shared/pipes/htmlsafe.pipe';
+
+
 
 
 @NgModule({
@@ -33,8 +37,10 @@ import { SafePipe } from 'src/app/safe.pipe';
     PublicRoutingModule,
     HttpClientModule,
     FormsModule,
-    SafePipe
+    SharedModule,
   
-  ]
+    
+  ],
+
 })
 export class PublicModule { }

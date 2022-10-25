@@ -1,7 +1,7 @@
 
 <div>
     {{page.title}}
-    <div [innerHTML]="page.content | safe:'html'">
+    <div [innerHTML]="page.content  | htmlsafe:'html'">
 
     </div>
 </div>

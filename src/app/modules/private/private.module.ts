@@ -16,7 +16,7 @@ import { AddtopicComponent } from './components/addtopic/addtopic.component';
 import { AddpageComponent } from './components/addpage/addpage.component';
 import { FormsModule } from '@angular/forms';
 import { QuillModule } from 'ngx-quill';
-import { SafePipe } from './pipes/safe.pipe'
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -32,13 +32,14 @@ import { SafePipe } from './pipes/safe.pipe'
          AddSubjectComponent,
          AddtopicComponent,
          AddpageComponent,
-         SafePipe
+         
   ],
   imports: [
     CommonModule,
     PrivateRoutingModule,
     HttpClientModule,
     FormsModule,
+    SharedModule,
     QuillModule.forRoot()
 
   ]
